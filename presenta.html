@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yachay Mind - Presentación de Impacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712; /* Nearly black */
+            color: #E5E7EB; 
+        }
+        .slide-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5rem 2rem;
+            border-bottom: 1px solid #1f2937;
+        }
+        .hero-title {
+            @apply text-5xl md:text-7xl font-black tracking-tighter;
+            background: -webkit-linear-gradient(45deg, #A5B4FC, #3B82F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            @apply text-4xl md:text-5xl font-bold tracking-tight text-center;
+            color: #E5E7EB;
+        }
+        .section-subtitle {
+            @apply text-lg md:text-xl text-center max-w-3xl mt-4;
+            color: #9ca3af; 
+        }
+        .stat-card {
+            @apply bg-gray-900/50 p-6 rounded-2xl shadow-lg text-center backdrop-blur-sm border border-gray-700/50;
+        }
+        .stat-number {
+            @apply text-5xl md:text-6xl font-black text-blue-400;
+        }
+        .stat-label {
+            @apply text-base text-gray-400 mt-2;
+        }
+        .cta-button {
+            @apply mt-8 px-10 py-4 bg-blue-600 text-white font-bold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .story-text {
+            @apply text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto text-center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Slide 0: El Gancho -->
+    <section id="slide-0" class="slide-section">
+        <!-- Speaker Notes: "Hay 4.5 millones de futuros en juego en Perú. En el corazón de los Andes, el talento a menudo se pierde en el silencio. Esta es la historia de cómo podemos darle una voz." -->
+        <div class="text-center fade-in">
+            <h1 class="hero-title">El talento no debería perderse en el silencio.</h1>
+            <p class="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                Para 4.5 millones de peruanos quechua-hablantes, la brecha digital y lingüística es una barrera real.
+                <br class="hidden md:block">
+                Hoy les presentamos una solución que habla su idioma y funciona sin conexión.
+            </p>
+            <div class="mt-12">
+                <img src="https://i.postimg.cc/qBhWchkx/paisaje-andino.jpg" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x400/1F2937/93C5FD?text=Paisaje+Andino';"
+                     alt="Impresionante paisaje andino al amanecer" class="rounded-2xl mx-auto shadow-2xl object-cover h-96 w-full max-w-5xl">
+            </div>
+            <p class="mt-12 text-gray-500">YachayMind / ShemHack 001</p>
+        </div>
+    </section>
+
+    <!-- Slide 1: El Problema Humanizado -->
+    <section id="slide-1" class="slide-section bg-gray-900/40">
+        <!-- Speaker Notes: "Les presento a Mayu. Tiene 10 años, una curiosidad infinita y vive en una comunidad donde el 96% no tiene internet. Su maestra, una heroína, se divide entre 40 niños. Mayu se siente ansiosa, pero no sabe cómo expresarlo. El potencial de Mayu es inmenso, pero su mundo está lleno de barreras invisibles." -->
+        <div class="text-center fade-in">
+            <h2 class="section-title">Conozcan el mundo de <span class="text-blue-400">Mayu</span>.</h2>
+            <p class="section-subtitle">Su potencial es infinito. Sus barreras son estructurales.</p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl">
+                <div class="stat-card">
+                    <p class="stat-number">96%</p>
+                    <p class="stat-label">de su comunidad vive desconectada, sin internet fijo.</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number">1:40</p>
+                    <p class="stat-label">Es la proporción de su maestra por alumnos, el doble del máximo recomendado.</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number">Quechua</p>
+                    <p class="stat-label">Es su lengua materna, pero sus herramientas de aprendizaje no lo son.</p>
+                </div>
+                <div class="stat-card border-red-500/50">
+                    <p class="stat-number text-red-400">900K</p>
+                    <p class="stat-label">Atenciones de salud mental a nivel nacional (S1 2024), un síntoma de una crisis silenciosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: La Solución - El Héroe -->
+    <section id="slide-2" class="slide-section">
+        <!-- Speaker Notes: "¿Y si la tecnología pudiera cerrar estas brechas en lugar de ampliarlas? ¿Y si pudiera hablar el idioma de Mayu, funcionar en su bolsillo sin internet y darle el apoyo que necesita, justo cuando lo necesita? Ese es el propósito de YachayMind." -->
+        <div class="w-full max-w-6xl mx-auto text-center fade-in">
+            <h2 class="section-title">¿Y si la IA hablara su idioma y entendiera su mundo?</h2>
+            <p class="section-subtitle">Presentamos YachayMind: Un copiloto para el bienestar y el aprendizaje, 100% offline.</p>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-gray-900 p-8 rounded-2xl text-center">
+                    <svg class="w-12 h-12 mx-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-bold mt-4 text-white">Detección Temprana</h3>
+                    <p class="text-gray-400 mt-2">Identifica señales de ansiedad o depresión a través de conversaciones de voz naturales y privadas.</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-2xl text-center border-2 border-blue-500 shadow-2xl transform scale-105">
+                     <svg class="w-12 h-12 mx-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    <h3 class="text-xl font-bold mt-4 text-white">Apoyo Emocional Inmediato</h3>
+                    <p class="text-gray-400 mt-2">Ofrece micro-intervenciones guiadas (TCC) y técnicas de respiración en momentos de estrés.</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-2xl text-center">
+                    <svg class="w-12 h-12 mx-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <h3 class="text-xl font-bold mt-4 text-white">Tutoría Académica</h3>
+                    <p class="text-gray-400 mt-2">Resuelve dudas de matemáticas (5.º primaria) siguiendo el currículo oficial del Minedu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: La Prueba (Demo y Arquitectura) -->
+    <section id="slide-3" class="slide-section">
+        <!-- Speaker Notes: "Esto no es una promesa, es una realidad. Lo hemos construido en 48 horas. Así es como funciona... (explicar arquitectura de forma simple). Y aquí lo tienen en acción... (reproducir video). En menos de 1.5 segundos, en un teléfono de gama baja, YachayMind está ahí para Mayu." -->
+        <div class="w-full max-w-4xl mx-auto text-center fade-in">
+            <h2 class="section-title">Magia Offline: <span class="text-blue-400">Véanlo en acción.</span></h2>
+            <p class="section-subtitle">Construido para funcionar en el mundo real, no en la nube.</p>
+            <div class="mt-12 bg-black rounded-2xl shadow-2xl p-4 aspect-video w-full">
+                <div class="w-full h-full bg-gray-800 flex items-center justify-center rounded-lg">
+                    <p class="text-gray-400 text-2xl font-bold">Video de la Demo (90s)</p>
+                </div>
+            </div>
+            <div class="mt-8 text-left grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <p><strong class="text-blue-300">Tutoría:</strong> “¿Cómo divido 12,6 entre 0,3?” → El agente guía paso a paso y da feedback.</p>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <p><strong class="text-green-300">Bienestar:</strong> “Del 0 al 10, ¿cómo te sientes?” → “Un 2...” → Inicia una micro-intervención.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: La Tracción (Métricas y Roadmap) -->
+    <section id="slide-4" class="slide-section bg-gray-900/40">
+        <!-- Speaker Notes: "Los primeros resultados son claros. Funciona rápido, es preciso y los usuarios lo encuentran fácil de usar. Pero esto es solo el comienzo. Tenemos una hoja de ruta clara para pasar de este MVP a un movimiento nacional que impacte a miles de estudiantes." -->
+        <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-in">
+            <div>
+                <h2 class="section-title text-left">De MVP a Movimiento.</h2>
+                <p class="text-lg text-gray-400 max-w-xl mt-4">Nuestros resultados iniciales validan el potencial. Nuestro roadmap define el futuro.</p>
+                <div class="mt-8 grid grid-cols-2 gap-6">
+                    <div class="stat-card">
+                        <p class="stat-number">1.3s</p>
+                        <p class="stat-label">Latencia media (Redmi 9A).</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-number">≥80%</p>
+                        <p class="stat-label">F-score en detección de riesgo.</p>
+                    </div>
+                    <div class="stat-card">
+                        <p class="stat-number">< 4%</p>
+                        <p class="stat-label">Uso de batería (sesión 10 min).</p>
+                    </div>
+                     <div class="stat-card">
+                        <p class="stat-number">>70</p>
+                        <p class="stat-label">Puntaje de usabilidad (SUS).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 lg:mt-0">
+                <div class="relative pl-8 pb-8 border-l-2 border-blue-500">
+                    <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2 top-1 border-4 border-gray-900"></div>
+                    <h3 class="font-bold text-lg text-white">Q3 2025: Fine-tuning y Plataforma Docente</h3>
+                    <p class="text-gray-400">Entrenar modelos con data peruana y crear un panel de métricas anónimas para educadores.</p>
+                </div>
+                <div class="relative pl-8 pb-8 border-l-2 border-blue-500">
+                     <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2 top-1 border-4 border-gray-900"></div>
+                    <h3 class="font-bold text-lg text-white">Q4 2025: Integración CSMC y Expansión Lingüística</h3>
+                    <p class="text-gray-400">Conectar con la red de Salud Mental Comunitaria y desarrollar packs en Asháninka y Shipibo.</p>
+                </div>
+                 <div class="relative pl-8">
+                     <div class="absolute w-4 h-4 bg-blue-400 rounded-full -left-2 top-1 border-4 border-gray-900"></div>
+                    <h3 class="font-bold text-lg text-white">2026: Certificación y Adopción Nacional</h3>
+                    <p class="text-gray-400">Buscar la validación oficial de MINSA y Minedu para un despliegue a gran escala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 5: La Invitación -->
+    <section id="slide-5" class="slide-section">
+        <!-- Speaker Notes: "El futuro de Mayu y de 4.5 millones de peruanos no debería depender de su código postal. La tecnología para cambiar esta realidad existe, la hemos construido. Ahora, necesitamos su ayuda para llevarla a cada rincón del país. Únanse a nosotros." -->
+        <div class="text-center fade-in">
+            <h2 class="section-title">El futuro de Mayu está en nuestras manos.</h2>
+            <p class="section-subtitle">La tecnología es solo el comienzo. El impacto real requiere una comunidad.</p>
+            <div class="mt-12 inline-block bg-gray-900/50 border border-gray-700 rounded-2xl p-10 text-left max-w-2xl">
+                <h3 class="font-bold text-2xl mb-6 text-center text-white">Para escalar nuestro impacto, buscamos:</h3>
+                <ul class="space-y-4 text-lg text-gray-300">
+                    <li class="flex items-start"><span class="text-blue-400 mr-3">→</span><div><strong>Pilotos Escolares:</strong> Socios en 3 escuelas rurales para validar nuestro impacto en 2025-H2.</div></li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-3">→</span><div><strong>Mentores Lingüistas:</strong> Expertos en quechua para perfeccionar la fluidez y el contexto cultural de nuestro modelo.</div></li>
+                    <li class="flex items-start"><span class="text-blue-400 mr-3">→</span><div><strong>Créditos Cloud:</strong> Apoyo para el entrenamiento de modelos de próxima generación.</div></li>
+                </ul>
+            </div>
+            <div>
+                 <a href="mailto:contacto@yachaymind.pe?subject=Interesado en YachayMind" class="cta-button">Únete a la misión</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Script para la animación de entrada al hacer scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Opcional: para que la animación se repita cada vez que se entra en la vista
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.2 // Se activa cuando el 20% del elemento es visible
+            });
+
+            document.querySelectorAll('.fade-in').forEach(elem => {
+                observer.observe(elem);
+            });
+        });
+    </script>
+</body>
+</html>
